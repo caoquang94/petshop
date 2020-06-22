@@ -83,7 +83,7 @@ public class CareDetailController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         CareDetail careDetail = (CareDetail) careDetailService.findById(id);
         if(careDetail != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/careDetail/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/careDetail/delete");
             modelAndView.addObject("careDetail", careDetail);
             return modelAndView;
 

@@ -71,7 +71,7 @@ public class MyTeamController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         MyTeam myTeam = (MyTeam) myTeamService.findById(id);
         if(myTeam != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/myTeam/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/myTeam/delete");
             modelAndView.addObject("myTeam", myTeam);
             return modelAndView;
 

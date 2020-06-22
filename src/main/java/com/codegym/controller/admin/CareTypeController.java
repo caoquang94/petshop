@@ -71,7 +71,7 @@ public class CareTypeController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         CareType careType = (CareType) careTypeService.findById(id);
         if(careType != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/careType/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/careType/delete");
             modelAndView.addObject("careType", careType);
             return modelAndView;
 

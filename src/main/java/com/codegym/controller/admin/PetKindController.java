@@ -82,7 +82,7 @@ public class PetKindController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         PetKind petKind = (PetKind) petKindService.findById(id);
         if(petKind != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/petKind/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/petKind/delete");
             modelAndView.addObject("petKind", petKind);
             return modelAndView;
 

@@ -71,7 +71,7 @@ public class CustomerController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         Customer customer = (Customer) customerService.findById(id);
         if(customer != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/customer/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/customer/delete");
             modelAndView.addObject("customer", customer);
             return modelAndView;
 
