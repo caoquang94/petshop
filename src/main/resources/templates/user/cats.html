@@ -1,0 +1,161 @@
+	<!DOCTYPE html>
+	<html xmlns:th="http://www.thymeleaf.org" lang="en">
+	<head th:replace="layout::head">
+
+		<title>Cat</title></head>
+		<body>
+			  <header th:replace="layout::header">
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Cats				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="cats.html"> Cats</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Start cat-list Area -->
+			<section class="cat-list-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct1.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct2.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct3.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct4.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>	
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct5.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct6.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct7.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-cat-list">
+							  <img src="/assets/img/ct8.jpg" alt="" class="img-fluid">
+							  <div class="overlay">
+							    <div class="text">Siamese Cat</div>
+							  </div>
+							</div>
+						</div>												
+					</div>
+				</div>	
+			</section>
+			<!-- End cat-list Area -->
+
+			  <section class="testomial-area section-gap" id="testimonail">
+				  <div class="container">
+					  <div class="row d-flex justify-content-center">
+						  <div class="menu-content pb-60 col-lg-8">
+							  <div class="title text-center">
+								  <h1 class="mb-10">Our Service</h1>
+							  </div>
+						  </div>
+					  </div>
+					  <div class="row">
+						  <div class="active-testimonial-carusel">
+							  <th:block th:each="careType : ${careTypes}">
+								  <div class="single-testimonial item">
+									  <img class="mx-auto" th:src="${careType.image}" height="200px" th:width="240px" alt="">
+									  <p class="desc" th:text="${careType.description}"></p>
+									  <h4 th:text="${careType.name}"></h4>
+									  <p>
+										  CEO at Google
+									  </p>
+								  </div>
+							  </th:block>
+						  </div>
+					  </div>
+				  </div>
+			  </section>
+			<!-- Start calltoaction Area -->
+			  <section class="calltoaction-area section-gap relative">
+				  <div class="overlay overlay-bg"></div>
+				  <div class="container">
+
+					  <div class="row align-items-center justify-content-center">
+						  <h1 class="text-white">Poopet is here to Support Every<br>
+							  Aspect of your Pet’s Life
+						  </h1>
+						  <h5>Looking for proessional groomer or trainer?</h5>
+						  <div class="buttons d-flex flex-row">
+							  <a href="/contact" class="primary-btn text-uppercase">Contact Us</a>
+						  </div>
+					  </div>
+				  </div>
+			  </section>
+			<!-- End calltoaction Area -->													
+				
+			<!-- start footer Area -->		
+			<footer th:replace="layout::footer">
+			</footer>
+			<!-- End footer Area -->
+
+			  <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
+			  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			  <script src="/assets/js/vendor/bootstrap.min.js"></script>
+			  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+			  <script src="/assets/js/easing.min.js"></script>
+			  <script src="/assets/js/hoverIntent.js"></script>
+			  <script src="/assets/js/superfish.min.js"></script>
+			  <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+			  <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+			  <script src="/assets/js/owl.carousel.min.js"></script>
+			  <script src="/assets/js/jquery.nice-select.min.js"></script>
+			  <script src="/assets/js/mail-script.js"></script>
+			  <script src="/assets/js/main.js"></script>
+		</body>
+	</html>
