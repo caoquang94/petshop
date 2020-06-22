@@ -17,7 +17,7 @@ public class HomeController {
     private MyTeamService myTeamService;
     @Autowired
     private CareTypeService careTypeService;
-    @GetMapping("/home")
+    @GetMapping("/")
     public ModelAndView home(Pageable pageable){
         Page<MyTeam> myTeams = myTeamService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("user/index");
